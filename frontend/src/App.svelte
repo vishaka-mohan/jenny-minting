@@ -274,9 +274,9 @@
     {#if userAddress}
       <div>
         <div class="user-nfts">
-          your NFTs:
+          
           {#if nftStorage}
-            [ {#each userNfts.reverse() as nft, index}
+             {#each userNfts.reverse() as nft, index}
               <a
                 href={`https://cloudflare-ipfs.com/ipfs/${nft.ipfsHash}`}
                 target="_blank"
@@ -287,7 +287,7 @@
               {#if index < userNfts.length - 1}
                 <span>,&nbsp;</span>
               {/if}
-            {/each} ]
+            {/each} 
           {/if}
         </div>
         <br />
